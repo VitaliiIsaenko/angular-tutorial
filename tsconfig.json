@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "diagnostics": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "isolatedModules": false,
+    "jsx": "react",
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noLib": false,
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "suppressImplicitAnyIndexErrors": true
+  }
+}
