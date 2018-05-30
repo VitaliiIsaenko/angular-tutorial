@@ -53,7 +53,8 @@ class Item{
             </tbody>
         </table>
     </div>
-    <child-comp></child-comp>
+    <child-comp [userName] = "name" [userAge] = "userAge"></child-comp>
+    <input type="text" [(ngModel)]="name" />
     <p>Hello {{name}}</p>`,
     styles: [`h2, p {color:#333;}`]    
 })
@@ -70,5 +71,7 @@ export class AppComponent {
         if(text==null || text.trim()=="" || price==null)
             return;
         this.items.push(new Item(text, price));
-    }
+    };
+    name = "Mark";
+    userAge = 122;
 }
