@@ -52,7 +52,10 @@ class Item{
                 </tr>
             </tbody>
         </table>
-    </div>`
+    </div>
+    <child-comp></child-comp>
+    <p>Hello {{name}}</p>`,
+    styles: [`h2, p {color:#333;}`]    
 })
 export class AppComponent { 
     items: Item[] = 
