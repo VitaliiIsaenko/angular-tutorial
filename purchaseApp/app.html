@@ -36,6 +36,7 @@
         </tbody>
     </table>
 </div>
-<child-comp [userName] = "name" [userAge] = "userAge"></child-comp>
+<child-comp [userName] = "name" [userAge] = "userAge" (onChanged)="onChanged($event)"></child-comp>
 <input type="text" [(ngModel)]="name" />
 <p>Hello {{name}}</p>
+<h2>Количество кликов: {{clicks}}</h2>

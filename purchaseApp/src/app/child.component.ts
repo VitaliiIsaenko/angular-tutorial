@@ -1,10 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'child-comp',
     template: `<h2>Welcome {{name}}!</h2>
     <p>User name: {{userName}}</p>
-    <p>User Age: {{userAge}}</p>`,
+    <p>User Age: {{userAge}}</p>
+    <button (click)="change(true)">+</button>
+    <button (click)="change(false)">-</button>`,
     styles: [`h2, p {color:red;}`]
 })
 export class ChildComponent {
@@ -23,5 +25,10 @@ export class ChildComponent {
     }
     get userAge(): number {
         return this._userAge;
+    }
+
+    @Output() onChanged = new EventEmitter<boolean>();
+    change(increased:any) {
+        this.onChanged.emit(increased);
     }
 }

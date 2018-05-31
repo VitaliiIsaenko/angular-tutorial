@@ -34,4 +34,9 @@ export class AppComponent {
     };
     name = "Mark";
     userAge = 122;
+
+    clicks:number = 0;
+    onChanged(increased:any){
+        increased==true?this.clicks++:this.clicks--;
+    }
 }
