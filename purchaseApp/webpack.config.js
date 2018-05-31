@@ -1,23 +1,23 @@
 var path = require('path');
 var webpack = require('webpack');
-var UglifyJSPlugin = require('uglifyjs-webpack-plugin'); // плагин минимизации
+var UglifyJSPlugin = require('uglifyjs-webpack-plugin'); // minimization plugin
 module.exports = {
     entry: {
         'polyfills': './src/polyfills.ts',
         'app': './src/main.ts'
       },
    output:{
-       path: path.resolve(__dirname, './public'),     // путь к каталогу выходных файлов - папка public
+       path: path.resolve(__dirname, './public'),     // path to out directory
        publicPath: '/public/',
-       filename: "[name].js"       // название создаваемого файла
+       filename: "[name].js"       // name of the created file
    },
    resolve: {
     extensions: ['.ts', '.js']
   },
    module:{
-       rules:[   //загрузчик для ts
+       rules:[   // type script loader
            {
-               test: /\.ts$/, // определяем тип файлов
+               test: /\.ts$/, // define file types
                use: [
                 {
                     loader: 'awesome-typescript-loader',
@@ -38,8 +38,8 @@ module.exports = {
    plugins: [
     new webpack.ContextReplacementPlugin(
         /angular(\\|\/)core/,
-        path.resolve(__dirname, 'src'), // каталог с исходными файлами
-      {} // карта маршрутов
+        path.resolve(__dirname, 'src'), // source files directory
+      {} // path map
     ),
     new UglifyJSPlugin()
   ]

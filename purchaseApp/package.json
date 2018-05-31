@@ -2,7 +2,7 @@
   "name": "purchaseApp",
   "version": "1.0.0",
   "description": "First Angular 5 Project",
-  "author": "Eugene Popov <metanit.com>",
+  "author": "Vitalii (tutorial - metanit.com)",
   "scripts": {
     "dev": "webpack-dev-server --hot --open",
     "build": "webpack"
